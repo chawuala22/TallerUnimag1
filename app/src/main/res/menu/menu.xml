@@ -3,30 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/m1"
-        android:title="Menu 1"/>
+        android:id="@+id/random"
+        android:title="@string/aleatorio" />
 
     <item
-        android:id="@+id/m2"
-        android:title="Menu 2"/>
-
-    <item
-        android:id="@+id/m3"
-        android:icon="@android:drawable/stat_sys_phone_call_forward"
-        android:title="Menu 3"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/submenu"
-        android:title="Sub menu del perreo">
-        <menu >
-            <item
-                android:id="@+id/m4"
-                android:title="Menu 4" />
-            <item
-                android:id="@+id/m5"
-                android:title="Menu 5" />
-        </menu>
-    </item>
+        android:id="@+id/distance"
+        android:title="@string/distancia" />
 
 
 </menu>

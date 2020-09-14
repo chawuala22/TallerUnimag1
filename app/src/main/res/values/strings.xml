@@ -19,4 +19,14 @@
     <string name="mayor">mayor</string>
     <string name="imagen">Imagen</string>
     <string name="todo">TODO</string>
+    <string name="aleatorio"> Aleatorio</string>
+    <string name="distancia">Distancia</string>
+    <string name="x1">X1:</string>
+    <string name="x2">X2:</string>
+    <string name="y1">Y1:</string>
+    <string name="y2">Y2:</string>
+    <string name="puntomedio">PUNTO MEDIO</string>
+    <string name="pendiente">PENDIENTE</string>
+    <string name="cuadrante">CUADRANTE</string>
+    <string name="txtalea">Hola, oprime el boton para obtener tu numero aleatorio.</string>
 </resources>

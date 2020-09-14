@@ -3,6 +3,7 @@ package co.edu.unimagdalena.apmoviles.tallerunimag1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class Operations extends AppCompatActivity implements View.OnClickListener {
 
     EditText num1,num2;
     Button btnsumar,btnrestar,btndivi,btnmulti,btnmcm, btncmd,btnmayor;
@@ -25,7 +26,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main2);
+            setContentView(R.layout.activity_operations);
             instanciar();
             buttons();
 
@@ -46,16 +47,14 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         switch (item.getItemId()){
 
-            case R.id.m1 :
-                Toast.makeText(this,"Menu 1 ",Toast.LENGTH_SHORT).show();
+            case R.id.random :
+                startActivity(new Intent(this, Aleatorio.class ));
                 break;
 
-            case R.id.m2 :
-                Toast.makeText(this,"Menu 2",Toast.LENGTH_SHORT).show();
+            case R.id.distance :
+                startActivity(new Intent(this,Distance.class ));
                 break;
-            case R.id.m3 :
-                Toast.makeText(this,"Menu 3 ",Toast.LENGTH_SHORT).show();
-                break;
+
 
         }
 
@@ -93,9 +92,9 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         if (number1.isEmpty() || number2.isEmpty()) {
             Toast.makeText(this, "Hace falta numeros para realizar alguna operación", Toast.LENGTH_LONG).show();
         } else {
-            int numero1 = Integer.parseInt(num1.getText().toString());
-            int numero2 = Integer.parseInt(num2.getText().toString());
-            int mayor = 0, mcm = 0;
+            double numero1 = Double.parseDouble(num1.getText().toString());
+            double numero2 = Double.parseDouble(num2.getText().toString());
+            double mayor = 0, mcm = 0;
 
             switch (view.getId()) {
                 case R.id.btnsumar:

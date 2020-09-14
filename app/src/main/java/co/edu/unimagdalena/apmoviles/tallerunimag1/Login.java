@@ -1,9 +1,7 @@
 package co.edu.unimagdalena.apmoviles.tallerunimag1;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     EditText edituser, editcontra;
     Button buttoningre ,buttoncancel;
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         edituser = findViewById(R.id.user);
         editcontra = findViewById(R.id.contra);
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (edituser.getText().toString().equals("chawuala22") && editcontra.getText().toString().equals("12345")) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                        Intent intent = new Intent(getApplicationContext(), Operations.class);
                         startActivity(intent);
 
                     } else {
